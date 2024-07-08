@@ -10,9 +10,7 @@ namespace WebAppForDev.Models.DataContext
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            // Configurações adicionais do modelo, se necessário
-        }
+//mirgration  dotnet ef migrations add InitialCreate
+
     }
 }
