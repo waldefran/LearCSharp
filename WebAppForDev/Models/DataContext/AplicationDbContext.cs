@@ -10,7 +10,6 @@ namespace WebAppForDev.Models.DataContext
         {
         }
 
-//mirgration  dotnet ef migrations add InitialCreate
 
     }
 }
