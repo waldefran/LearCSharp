@@ -1,4 +1,4 @@
-﻿namespace WebAppForDev;
+﻿namespace WebAppForDev.Models;
 
 public class ServiceResponseModel<T> //O T significa que é um tipo genérico, ou seja, pode ser qualquer tipo de dado
 {

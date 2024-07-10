@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-namespace WebAppForDev;
+namespace WebAppForDev.Models;
 
 public class FuncionariosModel
 {

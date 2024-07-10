@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using WebAppForDev.Models;
+using WebAppForDev.Services;
 
 namespace WebAppForDev.Controllers
 {
@@ -6,16 +8,16 @@ namespace WebAppForDev.Controllers
     [Route("api/[controller]")]
     public class FuncionarioController : ControllerBase
     {
-        private readonly IFuncioncarioService _funcionarioService;
-        public FuncionarioController(IFuncioncarioService ifuncionarioService) //Deveria ser IfuncionarioInterface
+        private readonly IFuncionarioService _ifuncionarioService;
+        public FuncionarioController(IFuncionarioService ifuncionarioService) //Deveria ser IfuncionarioInterface
         {
-            _funcionarioService = ifuncionarioService;
+            _ifuncionarioService = ifuncionarioService;
         }
         // GET: api/Funcionario
         [HttpGet]
-        public IActionResult Get()
+        public async Task<ActionResult<ServiceResponseModel<List<FuncionariosModel>>>> GetFuncionarios()
         {
-            return Ok("Get all funcionarios");
+            return Ok(await _ifuncionarioService.GetFuncionarios());
         }
 
 

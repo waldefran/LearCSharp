@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Sercice\FuncionarioService.cs" />
+    <Compile Remove="Service\FuncionarioService.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Sercice\FuncionarioService.cs" />
+    <None Include="Services\" />
   </ItemGroup>
 
 </Project>
