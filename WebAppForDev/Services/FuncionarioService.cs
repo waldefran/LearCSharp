@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using WebAppForDev.Models;
 using WebAppForDev.Models.DataContext;
 
@@ -19,7 +20,7 @@ public class FuncionarioService : IFuncionarioService
         try
         {
 
-            response.Data = _context.Funcionarios.ToList();
+            response.Data = await _context.Funcionarios.ToListAsync();
 
         }
         catch (Exception ex)
@@ -27,6 +28,7 @@ public class FuncionarioService : IFuncionarioService
             response.IsSuccess = false;
             response.Message = ex.Message;
         }
+        //return await
         return response;
     }
     // task<ServiceResponseModel<FuncionariosModel>> IFuncionarioService.GetFuncionarioById(int id)
