@@ -4,5 +4,5 @@ public class ServiceResponseModel<T> //O T significa que é um tipo genérico, o
 {
     public T? Data { get; set; }
     public string Message { get; set; } = string.Empty;
-    public bool IsSuccess { get; set; }
+    public bool IsSuccess { get; set; } = true;
 }
